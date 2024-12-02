@@ -1,5 +1,6 @@
 from pathlib import Path
 
+
 def read_input(file_path: Path) -> tuple[list[int], list[int]]:
     left_list: list[int] = []
     right_list: list[int] = []
@@ -26,13 +27,13 @@ def day_1_part_2(left_list: list[int], right_list: list[int]) -> int:
     return sum(similarity)
 
 def calculate_differences(list1: list[int], list2: list[int]) -> list[int]:
-    return [abs(a - b) for a, b in zip(list1, list2)]
+    return [abs(a - b) for a, b in zip(list1, list2, strict=False)]
 
 def count_occurrences(left_list: list[int], right_list: list[int]) -> list[int]:
     return [right_list.count(item) for item in left_list]
 
 def multiply_lists(list1: list[int], list2: list[int]) -> list[int]:
-    return [a * b for a, b in zip(list1, list2)]
+    return [a * b for a, b in zip(list1, list2, strict=False)]
 
 file_path: Path = Path.cwd() / "Input" / "day1.txt"
 left_list, right_list = read_input(file_path)
