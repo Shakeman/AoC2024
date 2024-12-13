@@ -97,4 +97,5 @@ typeCheckingMode = "strict"
 useLibraryCodeForTypes = true
 reportMissingTypeStubs = true
 reportMissingImports = true
+exclude = ["**/site-packages", "**/dist-packages", "**/lib", "**/Lib"]
 
